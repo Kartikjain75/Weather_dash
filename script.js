@@ -22,7 +22,7 @@ function fetchWeather() {
 function updateTodayWeather(data) {
     const today = new Date().toISOString().split("T")[0];
     document.getElementById("city-date").innerText = `${data.name} (${today})`;
-    document.getElementById("temperature").innerText = `Temperature: ${data.main.temp}°C`;
+    document.getElementById("temperature").innerText = `Temperature: ${data.main.temp/10}°C`;
     document.getElementById("wind").innerText = `Wind: ${data.wind.speed} M/S`;
     document.getElementById("humidity").innerText = `Humidity: ${data.main.humidity}%`;
     document.getElementById("condition").innerText = `Condition: ${data.weather[0].description}`;
